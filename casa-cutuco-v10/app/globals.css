@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #14221b;
+  --forest: #24483a;
+  --forest-dark: #173228;
+  --cream: #fbf5e9;
+  --clay: #b96745;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; color:var(--ink); background:#fffdf8; font-family:Arial,Helvetica,sans-serif; }
+button,input,select,textarea { font:inherit; }
+.hero {
+  background:
+    linear-gradient(90deg, rgba(17,35,27,.80), rgba(17,35,27,.25)),
+    url("https://a0.muscache.com/im/pictures/miso/Hosting-1548260998568327005/original/28d23295-cb8d-4dda-903b-7a5d521fb614.jpeg?im_w=1200");
+  background-size:cover;
+  background-position:center;
+}
