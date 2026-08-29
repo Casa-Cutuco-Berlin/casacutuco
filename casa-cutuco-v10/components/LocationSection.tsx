@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { MapPin, Cloud, Droplets, Wind, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { MapPin, Droplets, Wind, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { useLang } from "./LanguageProvider";
 
 // Weather Widget Component
@@ -119,7 +119,7 @@ function WeatherWidget() {
 
 // Attractions Carousel Component
 function AttractionsCarousel() {
-  const { t, lang } = useLang();
+  const { lang } = useLang();
   const [scrollPos, setScrollPos] = useState(0);
   const containerRef = React.useRef<HTMLDivElement>(null);
 
@@ -292,13 +292,13 @@ function FeatureHighlights() {
 
 // Main Location Section
 export default function LocationSection() {
-  const { t, lang } = useLang();
+  const { lang } = useLang();
 
   const address = {
     street: "2a Avenida Sur y 6a Calle Oriente",
-    neighborhood: lang === "es" ? "Barrio San José" : "Barrio San José",
+    neighborhood: "Barrio San José",
     city: "Berlín, Usulután",
-    country: lang === "es" ? "El Salvador" : "El Salvador"
+    country: "El Salvador"
   };
 
   const mapEmbedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.0419!2d-88.6833!3d13.4833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f635a7d0000001%3A0x000!2zMTPlLjI5JzAwLjAiTiA4OMK44zA0JzI0LjAiVw!5e0!3m2!1sen!2ssv!4v1234567890`;
@@ -333,7 +333,7 @@ export default function LocationSection() {
                 width="100%"
                 height="100%"
                 style={{ border: 0, borderRadius: "24px" }}
-                allowFullScreen=""
+                allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Casa Cutuco Location Map"
