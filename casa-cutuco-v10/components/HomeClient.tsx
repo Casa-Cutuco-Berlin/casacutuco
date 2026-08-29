@@ -3,6 +3,7 @@ import Header from "./Header";
 import PropertyCard from "./PropertyCard";
 import VideoTour from "./VideoTour";
 import PhotoGalleries from "./PhotoGalleries";
+import LocationSection from "./LocationSection";
 import { useLang } from "./LanguageProvider";
 import { CalendarSync, ShieldCheck, MapPin } from "lucide-react";
 
@@ -36,7 +37,9 @@ export default function HomeClient() {
 
       <VideoTour />
 
-      <section id="location" className="bg-[#24483a] text-white">
+      <LocationSection />
+
+      <section id="location-info" className="bg-[#24483a] text-white">
         <div className="mx-auto grid max-w-7xl gap-6 px-5 py-20 md:grid-cols-2 lg:px-8">
           <div className="rounded-[28px] border border-white/15 p-7">
             <CalendarSync size={28}/>
