@@ -131,7 +131,7 @@ function AttractionsCarousel() {
       description: lang === "es" ? "Mercados locales, parque central y arquitectura colonial" : "Local markets, central park & colonial architecture",
       time: "5 min",
       category: lang === "es" ? "Pueblo" : "Town",
-      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=300&fit=crop"
+      image: "https://elsalvador.travel/system/wp-content/uploads/2021/04/Berlin6E9A4842.jpg"
     },
     {
       id: 2,
@@ -140,7 +140,7 @@ function AttractionsCarousel() {
       description: lang === "es" ? "Plantaciones de café y tours educativos" : "Coffee plantations & educational farm tours",
       time: "15 min",
       category: lang === "es" ? "Naturaleza" : "Nature",
-      image: "https://images.unsplash.com/photo-1559056199-641a0ac8b3f7?w=500&h=300&fit=crop"
+      image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip"
     },
     {
       id: 3,
@@ -149,7 +149,7 @@ function AttractionsCarousel() {
       description: lang === "es" ? "Comida salvadoreña auténtica y cafés modernos" : "Authentic Salvadoran food & modern cafés",
       time: "5-10 min",
       category: lang === "es" ? "Gastronomía" : "Dining",
-      image: "https://images.unsplash.com/photo-1504674900769-7f9ffc77f34d?w=500&h=300&fit=crop"
+      image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip"
     },
     {
       id: 4,
@@ -158,7 +158,7 @@ function AttractionsCarousel() {
       description: lang === "es" ? "Vistas panorámicas de las montañas" : "Panoramic mountain views & sunrise spots",
       time: "10-20 min",
       category: lang === "es" ? "Vistas" : "Views",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop"
+      image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip"
     },
     {
       id: 5,
@@ -167,7 +167,7 @@ function AttractionsCarousel() {
       description: lang === "es" ? "Caminatas en la naturaleza y exploración" : "Scenic hiking & nature exploration",
       time: "20-30 min",
       category: lang === "es" ? "Aventura" : "Adventure",
-      image: "https://images.unsplash.com/photo-1551632786-de41ec16a41d?w=500&h=300&fit=crop"
+      image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip"
     },
     {
       id: 6,
@@ -176,7 +176,7 @@ function AttractionsCarousel() {
       description: lang === "es" ? "Laguna volcánica única y ecosistema" : "Unique volcanic lagoon & ecosystem",
       time: "30 min",
       category: lang === "es" ? "Naturaleza" : "Nature",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop"
+      image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip"
     },
     {
       id: 7,
@@ -185,7 +185,7 @@ function AttractionsCarousel() {
       description: lang === "es" ? "Artesanías, flores y productos locales" : "Crafts, flowers & local produce",
       time: "5-10 min",
       category: lang === "es" ? "Compras" : "Shopping",
-      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=300&fit=crop"
+      image: "https://elsalvador.travel/system/wp-content/uploads/2021/04/Berlin6E9A4842.jpg"
     },
     {
       id: 8,
@@ -194,7 +194,7 @@ function AttractionsCarousel() {
       description: lang === "es" ? "Historia y patrimonio salvadoreño" : "Salvadoran history & heritage sites",
       time: "10-15 min",
       category: lang === "es" ? "Cultura" : "Culture",
-      image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=500&h=300&fit=crop"
+      image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip"
     }
   ];
 
@@ -291,59 +291,59 @@ function AttractionsPhotoGallery() {
   const galleryImages = [
     {
       id: 1,
-      title: lang === "es" ? "Centro de Berlín - Parque Central" : "Berlín Town Center - Central Park",
+      title: lang === "es" ? "Centro de Berlín" : "Berlín Town Center",
       category: lang === "es" ? "Pueblo" : "Town",
-      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=600&fit=crop",
-      description: lang === "es" ? "La plaza central con arquitectura colonial" : "The central plaza with colonial architecture"
+      image: "https://elsalvador.travel/system/wp-content/uploads/2021/04/Berlin6E9A4842.jpg",
+      description: lang === "es" ? "La plaza central con arquitectura colonial y vida local" : "The central plaza with colonial architecture and local life"
     },
     {
       id: 2,
       title: lang === "es" ? "Plantaciones de Café" : "Coffee Plantations",
       category: lang === "es" ? "Naturaleza" : "Nature",
-      image: "https://images.unsplash.com/photo-1559056199-641a0ac8b3f7?w=800&h=600&fit=crop",
-      description: lang === "es" ? "Tours de café en las montañas" : "Coffee tours in the mountains"
+      image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip",
+      description: lang === "es" ? "Tours de café en las montañas de Berlín" : "Coffee tours in the Berlin mountains"
     },
     {
       id: 3,
       title: lang === "es" ? "Gastronomía Local" : "Local Cuisine",
       category: lang === "es" ? "Gastronomía" : "Dining",
-      image: "https://images.unsplash.com/photo-1504674900769-7f9ffc77f34d?w=800&h=600&fit=crop",
-      description: lang === "es" ? "Comida salvadoreña auténtica" : "Authentic Salvadoran food"
+      image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip",
+      description: lang === "es" ? "Comida salvadoreña auténtica en restaurantes locales" : "Authentic Salvadoran food in local restaurants"
     },
     {
       id: 4,
       title: lang === "es" ? "Vistas Montañosas" : "Mountain Viewpoints",
       category: lang === "es" ? "Vistas" : "Views",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
-      description: lang === "es" ? "Panoramas espectaculares del amanecer" : "Spectacular sunrise panoramas"
+      image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip",
+      description: lang === "es" ? "Panoramas espectaculares del amanecer y atardecer" : "Spectacular sunrise and sunset panoramas"
     },
     {
       id: 5,
       title: lang === "es" ? "Senderos Naturales" : "Nature Trails",
       category: lang === "es" ? "Aventura" : "Adventure",
-      image: "https://images.unsplash.com/photo-1551632786-de41ec16a41d?w=800&h=600&fit=crop",
-      description: lang === "es" ? "Caminatas a través de bosques verdes" : "Hikes through lush forests"
+      image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip",
+      description: lang === "es" ? "Caminatas a través de bosques verdes y exuberantes" : "Hikes through lush and verdant forests"
     },
     {
       id: 6,
       title: lang === "es" ? "Laguna Alegría" : "Alegría Lagoon",
       category: lang === "es" ? "Naturaleza" : "Nature",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
-      description: lang === "es" ? "Laguna volcánica única" : "Unique volcanic lagoon"
+      image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip",
+      description: lang === "es" ? "Laguna volcánica única con ecosistema especial" : "Unique volcanic lagoon with special ecosystem"
     },
     {
       id: 7,
       title: lang === "es" ? "Mercados Locales" : "Local Markets",
       category: lang === "es" ? "Compras" : "Shopping",
-      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=600&fit=crop",
-      description: lang === "es" ? "Artesanías y productos locales" : "Crafts and local products"
+      image: "https://elsalvador.travel/system/wp-content/uploads/2021/04/Berlin6E9A4842.jpg",
+      description: lang === "es" ? "Artesanías, flores y productos locales frescos" : "Crafts, flowers and fresh local products"
     },
     {
       id: 8,
       title: lang === "es" ? "Patrimonio Cultural" : "Cultural Heritage",
       category: lang === "es" ? "Cultura" : "Culture",
-      image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop",
-      description: lang === "es" ? "Sitios históricos y culturales" : "Historic and cultural sites"
+      image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip",
+      description: lang === "es" ? "Sitios históricos y culturales de Berlín" : "Historic and cultural sites of Berlín"
     }
   ];
 
