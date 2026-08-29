@@ -138,7 +138,7 @@ const attractionsContent: AttractionContent[] = [
     },
     time: "5 min",
     category: { es: "Pueblo", en: "Town" },
-    image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip"
+    image: "https://elsalvador.travel/system/wp-content/uploads/2021/04/Berlin6E9A4842.jpg"
   },
   {
     id: 2,
@@ -150,7 +150,7 @@ const attractionsContent: AttractionContent[] = [
     },
     time: "15 min",
     category: { es: "Naturaleza", en: "Nature" },
-    image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip"
+    image: "https://elsalvador.travel/system/wp-content/uploads/2021/04/Berlin6E9A4842.jpg"
   },
   {
     id: 3,
