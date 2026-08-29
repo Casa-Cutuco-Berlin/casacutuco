@@ -117,86 +117,130 @@ function WeatherWidget() {
   );
 }
 
+type AttractionContent = {
+  id: number;
+  icon: string;
+  time: string;
+  image: string;
+  title: { es: string; en: string };
+  description: { es: string; en: string };
+  category: { es: string; en: string };
+};
+
+const attractionsContent: AttractionContent[] = [
+  {
+    id: 1,
+    icon: "🏛️",
+    title: { es: "Centro de Berlín", en: "Berlín Town Center" },
+    description: {
+      es: "Mercados locales, parque central y arquitectura colonial",
+      en: "Local markets, central park & colonial architecture"
+    },
+    time: "5 min",
+    category: { es: "Pueblo", en: "Town" },
+    image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip"
+  },
+  {
+    id: 2,
+    icon: "☕",
+    title: { es: "Café & Tours", en: "Coffee Farms & Tours" },
+    description: {
+      es: "Plantaciones de café y tours educativos",
+      en: "Coffee plantations & educational farm tours"
+    },
+    time: "15 min",
+    category: { es: "Naturaleza", en: "Nature" },
+    image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip"
+  },
+  {
+    id: 3,
+    icon: "🍽️",
+    title: { es: "Restaurantes Locales", en: "Local Restaurants" },
+    description: {
+      es: "Comida salvadoreña auténtica y cafés modernos",
+      en: "Authentic Salvadoran food & modern cafés"
+    },
+    time: "5-10 min",
+    category: { es: "Gastronomía", en: "Dining" },
+    image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip"
+  },
+  {
+    id: 4,
+    icon: "🏔️",
+    title: { es: "Miradores", en: "Mountain Viewpoints" },
+    description: {
+      es: "Vistas panorámicas de las montañas",
+      en: "Panoramic mountain views & sunrise spots"
+    },
+    time: "10-20 min",
+    category: { es: "Vistas", en: "Views" },
+    image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip"
+  },
+  {
+    id: 5,
+    icon: "🥾",
+    title: { es: "Senderos", en: "Nature Trails" },
+    description: {
+      es: "Caminatas en la naturaleza y exploración",
+      en: "Scenic hiking & nature exploration"
+    },
+    time: "20-30 min",
+    category: { es: "Aventura", en: "Adventure" },
+    image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip"
+  },
+  {
+    id: 6,
+    icon: "💧",
+    title: { es: "Laguna Alegría", en: "Alegría Lagoon" },
+    description: {
+      es: "Laguna volcánica única y ecosistema",
+      en: "Unique volcanic lagoon & ecosystem"
+    },
+    time: "30 min",
+    category: { es: "Naturaleza", en: "Nature" },
+    image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip"
+  },
+  {
+    id: 7,
+    icon: "🛍️",
+    title: { es: "Mercados", en: "Local Markets" },
+    description: {
+      es: "Artesanías, flores y productos locales",
+      en: "Crafts, flowers & local produce"
+    },
+    time: "5-10 min",
+    category: { es: "Compras", en: "Shopping" },
+    image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip"
+  },
+  {
+    id: 8,
+    icon: "🎭",
+    title: { es: "Sitios Culturales", en: "Cultural Landmarks" },
+    description: {
+      es: "Historia y patrimonio salvadoreño",
+      en: "Salvadoran history & heritage sites"
+    },
+    time: "10-15 min",
+    category: { es: "Cultura", en: "Culture" },
+    image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip"
+  }
+];
+
 // Attractions Carousel with Images
 function AttractionsCarousel() {
   const { lang } = useLang();
   const [scrollPos, setScrollPos] = useState(0);
   const containerRef = React.useRef<HTMLDivElement>(null);
 
-  const attractions = [
-    {
-      id: 1,
-      icon: "🏛️",
-      title: lang === "es" ? "Centro de Berlín" : "Berlín Town Center",
-      description: lang === "es" ? "Mercados locales, parque central y arquitectura colonial" : "Local markets, central park & colonial architecture",
-      time: "5 min",
-      category: lang === "es" ? "Pueblo" : "Town",
-      image: "https://elsalvador.travel/system/wp-content/uploads/2021/04/Berlin6E9A4842.jpg"
-    },
-    {
-      id: 2,
-      icon: "☕",
-      title: lang === "es" ? "Café & Tours" : "Coffee Farms & Tours",
-      description: lang === "es" ? "Plantaciones de café y tours educativos" : "Coffee plantations & educational farm tours",
-      time: "15 min",
-      category: lang === "es" ? "Naturaleza" : "Nature",
-      image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip"
-    },
-    {
-      id: 3,
-      icon: "🍽️",
-      title: lang === "es" ? "Restaurantes Locales" : "Local Restaurants",
-      description: lang === "es" ? "Comida salvadoreña auténtica y cafés modernos" : "Authentic Salvadoran food & modern cafés",
-      time: "5-10 min",
-      category: lang === "es" ? "Gastronomía" : "Dining",
-      image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip"
-    },
-    {
-      id: 4,
-      icon: "🏔️",
-      title: lang === "es" ? "Miradores" : "Mountain Viewpoints",
-      description: lang === "es" ? "Vistas panorámicas de las montañas" : "Panoramic mountain views & sunrise spots",
-      time: "10-20 min",
-      category: lang === "es" ? "Vistas" : "Views",
-      image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip"
-    },
-    {
-      id: 5,
-      icon: "🥾",
-      title: lang === "es" ? "Senderos" : "Nature Trails",
-      description: lang === "es" ? "Caminatas en la naturaleza y exploración" : "Scenic hiking & nature exploration",
-      time: "20-30 min",
-      category: lang === "es" ? "Aventura" : "Adventure",
-      image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip"
-    },
-    {
-      id: 6,
-      icon: "💧",
-      title: lang === "es" ? "Laguna Alegría" : "Alegría Lagoon",
-      description: lang === "es" ? "Laguna volcánica única y ecosistema" : "Unique volcanic lagoon & ecosystem",
-      time: "30 min",
-      category: lang === "es" ? "Naturaleza" : "Nature",
-      image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip"
-    },
-    {
-      id: 7,
-      icon: "🛍️",
-      title: lang === "es" ? "Mercados" : "Local Markets",
-      description: lang === "es" ? "Artesanías, flores y productos locales" : "Crafts, flowers & local produce",
-      time: "5-10 min",
-      category: lang === "es" ? "Compras" : "Shopping",
-      image: "https://elsalvador.travel/system/wp-content/uploads/2021/04/Berlin6E9A4842.jpg"
-    },
-    {
-      id: 8,
-      icon: "🎭",
-      title: lang === "es" ? "Sitios Culturales" : "Cultural Landmarks",
-      description: lang === "es" ? "Historia y patrimonio salvadoreño" : "Salvadoran history & heritage sites",
-      time: "10-15 min",
-      category: lang === "es" ? "Cultura" : "Culture",
-      image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip"
-    }
-  ];
+  const attractions = attractionsContent.map((item) => ({
+    id: item.id,
+    icon: item.icon,
+    title: lang === "es" ? item.title.es : item.title.en,
+    description: lang === "es" ? item.description.es : item.description.en,
+    time: item.time,
+    category: lang === "es" ? item.category.es : item.category.en,
+    image: item.image
+  }));
 
   const scroll = (direction: "left" | "right") => {
     if (!containerRef.current) return;
@@ -288,64 +332,13 @@ function AttractionsPhotoGallery() {
   const { lang } = useLang();
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
-  const galleryImages = [
-    {
-      id: 1,
-      title: lang === "es" ? "Centro de Berlín" : "Berlín Town Center",
-      category: lang === "es" ? "Pueblo" : "Town",
-      image: "https://elsalvador.travel/system/wp-content/uploads/2021/04/Berlin6E9A4842.jpg",
-      description: lang === "es" ? "La plaza central con arquitectura colonial y vida local" : "The central plaza with colonial architecture and local life"
-    },
-    {
-      id: 2,
-      title: lang === "es" ? "Plantaciones de Café" : "Coffee Plantations",
-      category: lang === "es" ? "Naturaleza" : "Nature",
-      image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip",
-      description: lang === "es" ? "Tours de café en las montañas de Berlín" : "Coffee tours in the Berlin mountains"
-    },
-    {
-      id: 3,
-      title: lang === "es" ? "Gastronomía Local" : "Local Cuisine",
-      category: lang === "es" ? "Gastronomía" : "Dining",
-      image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip",
-      description: lang === "es" ? "Comida salvadoreña auténtica en restaurantes locales" : "Authentic Salvadoran food in local restaurants"
-    },
-    {
-      id: 4,
-      title: lang === "es" ? "Vistas Montañosas" : "Mountain Viewpoints",
-      category: lang === "es" ? "Vistas" : "Views",
-      image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip",
-      description: lang === "es" ? "Panoramas espectaculares del amanecer y atardecer" : "Spectacular sunrise and sunset panoramas"
-    },
-    {
-      id: 5,
-      title: lang === "es" ? "Senderos Naturales" : "Nature Trails",
-      category: lang === "es" ? "Aventura" : "Adventure",
-      image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip",
-      description: lang === "es" ? "Caminatas a través de bosques verdes y exuberantes" : "Hikes through lush and verdant forests"
-    },
-    {
-      id: 6,
-      title: lang === "es" ? "Laguna Alegría" : "Alegría Lagoon",
-      category: lang === "es" ? "Naturaleza" : "Nature",
-      image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip",
-      description: lang === "es" ? "Laguna volcánica única con ecosistema especial" : "Unique volcanic lagoon with special ecosystem"
-    },
-    {
-      id: 7,
-      title: lang === "es" ? "Mercados Locales" : "Local Markets",
-      category: lang === "es" ? "Compras" : "Shopping",
-      image: "https://elsalvador.travel/system/wp-content/uploads/2021/04/Berlin6E9A4842.jpg",
-      description: lang === "es" ? "Artesanías, flores y productos locales frescos" : "Crafts, flowers and fresh local products"
-    },
-    {
-      id: 8,
-      title: lang === "es" ? "Patrimonio Cultural" : "Cultural Heritage",
-      category: lang === "es" ? "Cultura" : "Culture",
-      image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip",
-      description: lang === "es" ? "Sitios históricos y culturales de Berlín" : "Historic and cultural sites of Berlín"
-    }
-  ];
+  const galleryImages = attractionsContent.map((item) => ({
+    id: item.id,
+    title: lang === "es" ? item.title.es : item.title.en,
+    category: lang === "es" ? item.category.es : item.category.en,
+    image: item.image,
+    description: lang === "es" ? item.description.es : item.description.en
+  }));
 
   return (
     <div className="space-y-8">
@@ -378,6 +371,7 @@ function AttractionsPhotoGallery() {
                 <div className="p-4 text-white w-full">
                   <p className="text-xs font-bold uppercase tracking-wider mb-1 text-blue-200">{item.category}</p>
                   <p className="text-sm font-bold">{item.title}</p>
+                  <p className="text-xs text-white/90 mt-1 leading-5">{item.description}</p>
                 </div>
               </div>
             </div>
