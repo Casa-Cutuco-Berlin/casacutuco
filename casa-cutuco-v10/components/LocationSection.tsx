@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { MapPin, Droplets, Wind, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { MapPin, Droplets, Wind, ChevronLeft, ChevronRight, ExternalLink, X } from "lucide-react";
 import { useLang } from "./LanguageProvider";
 
 // Weather Widget Component
@@ -15,8 +15,8 @@ function WeatherWidget() {
       try {
         setLoading(true);
         // Using Open-Meteo free API (no API key required)
-        const lat = 13.4833;
-        const lon = -88.6833;
+        const lat = 13.496171711959391;
+        const lon = -88.53015834864676;
 
         const response = await fetch(
           `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code,relative_humidity_2m,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min&temperature_unit=celsius&wind_speed_unit=kmh&forecast_days=5&timezone=auto`,
@@ -117,7 +117,7 @@ function WeatherWidget() {
   );
 }
 
-// Attractions Carousel Component
+// Attractions Carousel with Images
 function AttractionsCarousel() {
   const { lang } = useLang();
   const [scrollPos, setScrollPos] = useState(0);
@@ -130,7 +130,8 @@ function AttractionsCarousel() {
       title: lang === "es" ? "Centro de Berlín" : "Berlín Town Center",
       description: lang === "es" ? "Mercados locales, parque central y arquitectura colonial" : "Local markets, central park & colonial architecture",
       time: "5 min",
-      category: lang === "es" ? "Pueblo" : "Town"
+      category: lang === "es" ? "Pueblo" : "Town",
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=300&fit=crop"
     },
     {
       id: 2,
@@ -138,7 +139,8 @@ function AttractionsCarousel() {
       title: lang === "es" ? "Café & Tours" : "Coffee Farms & Tours",
       description: lang === "es" ? "Plantaciones de café y tours educativos" : "Coffee plantations & educational farm tours",
       time: "15 min",
-      category: lang === "es" ? "Naturaleza" : "Nature"
+      category: lang === "es" ? "Naturaleza" : "Nature",
+      image: "https://images.unsplash.com/photo-1559056199-641a0ac8b3f7?w=500&h=300&fit=crop"
     },
     {
       id: 3,
@@ -146,7 +148,8 @@ function AttractionsCarousel() {
       title: lang === "es" ? "Restaurantes Locales" : "Local Restaurants",
       description: lang === "es" ? "Comida salvadoreña auténtica y cafés modernos" : "Authentic Salvadoran food & modern cafés",
       time: "5-10 min",
-      category: lang === "es" ? "Gastronomía" : "Dining"
+      category: lang === "es" ? "Gastronomía" : "Dining",
+      image: "https://images.unsplash.com/photo-1504674900769-7f9ffc77f34d?w=500&h=300&fit=crop"
     },
     {
       id: 4,
@@ -154,7 +157,8 @@ function AttractionsCarousel() {
       title: lang === "es" ? "Miradores" : "Mountain Viewpoints",
       description: lang === "es" ? "Vistas panorámicas de las montañas" : "Panoramic mountain views & sunrise spots",
       time: "10-20 min",
-      category: lang === "es" ? "Vistas" : "Views"
+      category: lang === "es" ? "Vistas" : "Views",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop"
     },
     {
       id: 5,
@@ -162,7 +166,8 @@ function AttractionsCarousel() {
       title: lang === "es" ? "Senderos" : "Nature Trails",
       description: lang === "es" ? "Caminatas en la naturaleza y exploración" : "Scenic hiking & nature exploration",
       time: "20-30 min",
-      category: lang === "es" ? "Aventura" : "Adventure"
+      category: lang === "es" ? "Aventura" : "Adventure",
+      image: "https://images.unsplash.com/photo-1551632786-de41ec16a41d?w=500&h=300&fit=crop"
     },
     {
       id: 6,
@@ -170,7 +175,8 @@ function AttractionsCarousel() {
       title: lang === "es" ? "Laguna Alegría" : "Alegría Lagoon",
       description: lang === "es" ? "Laguna volcánica única y ecosistema" : "Unique volcanic lagoon & ecosystem",
       time: "30 min",
-      category: lang === "es" ? "Naturaleza" : "Nature"
+      category: lang === "es" ? "Naturaleza" : "Nature",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop"
     },
     {
       id: 7,
@@ -178,7 +184,8 @@ function AttractionsCarousel() {
       title: lang === "es" ? "Mercados" : "Local Markets",
       description: lang === "es" ? "Artesanías, flores y productos locales" : "Crafts, flowers & local produce",
       time: "5-10 min",
-      category: lang === "es" ? "Compras" : "Shopping"
+      category: lang === "es" ? "Compras" : "Shopping",
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=300&fit=crop"
     },
     {
       id: 8,
@@ -186,7 +193,8 @@ function AttractionsCarousel() {
       title: lang === "es" ? "Sitios Culturales" : "Cultural Landmarks",
       description: lang === "es" ? "Historia y patrimonio salvadoreño" : "Salvadoran history & heritage sites",
       time: "10-15 min",
-      category: lang === "es" ? "Cultura" : "Culture"
+      category: lang === "es" ? "Cultura" : "Culture",
+      image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=500&h=300&fit=crop"
     }
   ];
 
@@ -241,23 +249,195 @@ function AttractionsCarousel() {
         {attractions.map((attraction) => (
           <div
             key={attraction.id}
-            className="snap-start flex-shrink-0 w-80 bg-white rounded-2xl border border-gray-100 p-5 shadow-sm hover:shadow-lg hover:border-gray-200 transition-all duration-300 transform hover:-translate-y-1"
+            className="snap-start flex-shrink-0 w-80 bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-lg hover:border-gray-200 transition-all duration-300 transform hover:-translate-y-1"
           >
-            <div className="flex items-start justify-between mb-4">
-              <span className="text-4xl">{attraction.icon}</span>
-              <span className="inline-block bg-gray-100 px-2.5 py-1 rounded-full text-xs font-semibold text-gray-700">
-                {attraction.category}
-              </span>
+            {/* Image */}
+            <div className="w-full h-48 overflow-hidden bg-gray-200">
+              <img 
+                src={attraction.image} 
+                alt={attraction.title}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
             </div>
-            <h4 className="font-black text-lg text-gray-900 mb-2">{attraction.title}</h4>
-            <p className="text-sm text-gray-600 mb-4 leading-6">{attraction.description}</p>
-            <div className="flex items-center gap-2 text-sm font-semibold text-[#b96745]">
-              <MapPin size={16} />
-              {attraction.time}
+
+            {/* Content */}
+            <div className="p-5">
+              <div className="flex items-start justify-between mb-3">
+                <span className="text-3xl">{attraction.icon}</span>
+                <span className="inline-block bg-gray-100 px-2.5 py-1 rounded-full text-xs font-semibold text-gray-700">
+                  {attraction.category}
+                </span>
+              </div>
+              <h4 className="font-black text-lg text-gray-900 mb-2">{attraction.title}</h4>
+              <p className="text-sm text-gray-600 mb-4 leading-6">{attraction.description}</p>
+              <div className="flex items-center gap-2 text-sm font-semibold text-[#b96745]">
+                <MapPin size={16} />
+                {attraction.time}
+              </div>
             </div>
           </div>
         ))}
       </div>
+    </div>
+  );
+}
+
+// Separate Photo Gallery Section
+function AttractionsPhotoGallery() {
+  const { lang } = useLang();
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+  const galleryImages = [
+    {
+      id: 1,
+      title: lang === "es" ? "Centro de Berlín - Parque Central" : "Berlín Town Center - Central Park",
+      category: lang === "es" ? "Pueblo" : "Town",
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=600&fit=crop",
+      description: lang === "es" ? "La plaza central con arquitectura colonial" : "The central plaza with colonial architecture"
+    },
+    {
+      id: 2,
+      title: lang === "es" ? "Plantaciones de Café" : "Coffee Plantations",
+      category: lang === "es" ? "Naturaleza" : "Nature",
+      image: "https://images.unsplash.com/photo-1559056199-641a0ac8b3f7?w=800&h=600&fit=crop",
+      description: lang === "es" ? "Tours de café en las montañas" : "Coffee tours in the mountains"
+    },
+    {
+      id: 3,
+      title: lang === "es" ? "Gastronomía Local" : "Local Cuisine",
+      category: lang === "es" ? "Gastronomía" : "Dining",
+      image: "https://images.unsplash.com/photo-1504674900769-7f9ffc77f34d?w=800&h=600&fit=crop",
+      description: lang === "es" ? "Comida salvadoreña auténtica" : "Authentic Salvadoran food"
+    },
+    {
+      id: 4,
+      title: lang === "es" ? "Vistas Montañosas" : "Mountain Viewpoints",
+      category: lang === "es" ? "Vistas" : "Views",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+      description: lang === "es" ? "Panoramas espectaculares del amanecer" : "Spectacular sunrise panoramas"
+    },
+    {
+      id: 5,
+      title: lang === "es" ? "Senderos Naturales" : "Nature Trails",
+      category: lang === "es" ? "Aventura" : "Adventure",
+      image: "https://images.unsplash.com/photo-1551632786-de41ec16a41d?w=800&h=600&fit=crop",
+      description: lang === "es" ? "Caminatas a través de bosques verdes" : "Hikes through lush forests"
+    },
+    {
+      id: 6,
+      title: lang === "es" ? "Laguna Alegría" : "Alegría Lagoon",
+      category: lang === "es" ? "Naturaleza" : "Nature",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+      description: lang === "es" ? "Laguna volcánica única" : "Unique volcanic lagoon"
+    },
+    {
+      id: 7,
+      title: lang === "es" ? "Mercados Locales" : "Local Markets",
+      category: lang === "es" ? "Compras" : "Shopping",
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=600&fit=crop",
+      description: lang === "es" ? "Artesanías y productos locales" : "Crafts and local products"
+    },
+    {
+      id: 8,
+      title: lang === "es" ? "Patrimonio Cultural" : "Cultural Heritage",
+      category: lang === "es" ? "Cultura" : "Culture",
+      image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop",
+      description: lang === "es" ? "Sitios históricos y culturales" : "Historic and cultural sites"
+    }
+  ];
+
+  return (
+    <div className="space-y-8">
+      {/* Gallery Title */}
+      <div>
+        <p className="text-sm font-semibold text-[#b96745] uppercase tracking-wider">
+          {lang === "es" ? "Galería" : "Gallery"}
+        </p>
+        <h3 className="text-3xl font-black text-gray-900 mt-2">
+          {lang === "es" ? "Atracciones Cercanas de Berlín" : "Attractions Around Berlín"}
+        </h3>
+      </div>
+
+      {/* Gallery Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {galleryImages.map((item, idx) => (
+          <div
+            key={item.id}
+            onClick={() => setSelectedImage(idx)}
+            className="cursor-pointer group overflow-hidden rounded-2xl bg-gray-100 shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+          >
+            <div className="relative h-60 overflow-hidden">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300 flex items-end">
+                <div className="p-4 text-white w-full">
+                  <p className="text-xs font-bold uppercase tracking-wider mb-1 text-blue-200">{item.category}</p>
+                  <p className="text-sm font-bold">{item.title}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Lightbox Modal */}
+      {selectedImage !== null && (
+        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
+          <div className="bg-white rounded-2xl max-w-2xl w-full overflow-hidden shadow-2xl">
+            <div className="relative">
+              <img
+                src={galleryImages[selectedImage].image}
+                alt={galleryImages[selectedImage].title}
+                className="w-full h-auto max-h-96 object-cover"
+              />
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-4 right-4 p-2 bg-black/50 hover:bg-black/70 rounded-full text-white transition-colors"
+                aria-label="Close"
+              >
+                <X size={24} />
+              </button>
+
+              {/* Navigation Arrows */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedImage((selectedImage - 1 + galleryImages.length) % galleryImages.length);
+                }}
+                className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 rounded-full text-white transition-colors"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedImage((selectedImage + 1) % galleryImages.length);
+                }}
+                className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 rounded-full text-white transition-colors"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
+
+            <div className="p-6">
+              <p className="text-sm font-bold text-[#b96745] uppercase tracking-wider mb-2">
+                {galleryImages[selectedImage].category}
+              </p>
+              <h3 className="text-2xl font-black text-gray-900 mb-3">
+                {galleryImages[selectedImage].title}
+              </h3>
+              <p className="text-gray-600 leading-7">
+                {galleryImages[selectedImage].description}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -295,14 +475,16 @@ export default function LocationSection() {
   const { lang } = useLang();
 
   const address = {
-    street: "2a Avenida Sur y 6a Calle Oriente",
+    street: "2a Av. Sur y 6a Calle Oriente",
     neighborhood: "Barrio San José",
     city: "Berlín, Usulután",
+    zipcode: "03403",
     country: "El Salvador"
   };
 
-  const mapEmbedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.0419!2d-88.6833!3d13.4833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f635a7d0000001%3A0x000!2zMTPlLjI5JzAwLjAiTiA4OMK44zA0JzI0LjAiVw!5e0!3m2!1sen!2ssv!4v1234567890`;
-  const googleMapsUrl = `https://www.google.com/maps/search/2a+Avenida+Sur+y+6a+Calle+Oriente+Barrio+San+José+Berlín+Usulután+El+Salvador`;
+  // Updated map embed with precise coordinates
+  const mapEmbedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8642!2d-88.53015834864676!3d13.496171711959391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sCasa%20Cutuco!2sBerlín%2C%20Usulután%2C%20El%20Salvador!5e0!3m2!1sen!2ssv!4v1693318800000`;
+  const googleMapsUrl = `https://www.google.com/maps/?q=13.496171711959391,-88.53015834864676`;
 
   return (
     <section id="location" className="relative bg-white py-20 lg:py-28">
@@ -352,7 +534,8 @@ export default function LocationSection() {
                   </p>
                   <p className="text-xl font-black mb-2">{address.street}</p>
                   <p className="text-white/80 mb-1">{address.neighborhood}</p>
-                  <p className="text-white/80">{address.city}, {address.country}</p>
+                  <p className="text-white/80 mb-1">{address.city}, {address.zipcode}</p>
+                  <p className="text-white/80">{address.country}</p>
                 </div>
               </div>
 
@@ -397,9 +580,14 @@ export default function LocationSection() {
           </div>
         </div>
 
-        {/* Attractions Carousel */}
-        <div className="mt-20 pt-16 border-t border-gray-100">
+        {/* Attractions Carousel with Images */}
+        <div className="my-20">
           <AttractionsCarousel />
+        </div>
+
+        {/* Photo Gallery Section */}
+        <div className="my-20 py-16 border-t border-b border-gray-100">
+          <AttractionsPhotoGallery />
         </div>
 
         {/* Bottom CTA */}
