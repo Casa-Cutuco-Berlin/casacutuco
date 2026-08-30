@@ -27,7 +27,7 @@ export default function HomeClient() {
       <section className="border-y border-black/6 bg-[#fbf5e9]">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:px-8 lg:py-20">
           <div className="order-1">
-            <div className="overflow-hidden rounded-[32px] bg-white shadow-[0_18px_50px_rgba(20,34,27,0.12)]">
+            <div className="h-[520px] overflow-hidden rounded-[32px] bg-white shadow-[0_18px_50px_rgba(20,34,27,0.12)] sm:h-[640px] lg:h-[720px]">
               <img
                 src="https://github.com/user-attachments/assets/37349318-3c7e-46c7-89a1-84f80c27fdd6"
                 alt="Portrait of Jose Eliseo Soriano, Chepe Cutuco"
