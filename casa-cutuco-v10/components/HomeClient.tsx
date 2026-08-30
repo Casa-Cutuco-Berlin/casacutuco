@@ -24,6 +24,40 @@ export default function HomeClient() {
         </div>
       </section>
 
+      <section className="border-y border-black/6 bg-[#fbf5e9]">
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:px-8 lg:py-20">
+          <div className="order-1">
+            <div className="overflow-hidden rounded-[32px] bg-white shadow-[0_18px_50px_rgba(20,34,27,0.12)]">
+              <img
+                src="https://github.com/user-attachments/assets/37349318-3c7e-46c7-89a1-84f80c27fdd6"
+                alt="Jose Eliseo Soriano “Chepe Cutuco”"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="order-2">
+            <p className="text-xs font-black uppercase tracking-[.18em] text-[#b96745]">
+              {lang === "es" ? "Nuestra historia" : "Our story"}
+            </p>
+            <blockquote className="mt-5">
+              <p
+                className="text-[2.5rem] leading-[1.2] text-[#24483a] sm:text-[3.2rem] lg:text-[3.8rem]"
+                style={{ fontFamily: "\"Snell Roundhand\", \"Brush Script MT\", \"Segoe Script\", cursive" }}
+              >
+                “Yo nunca le he negado mi casa a nadie. Mi puerta siempre estará abierta para mi familia y amigos, mientras haya respeto y amor.”
+              </p>
+            </blockquote>
+            <p className="mt-6 text-lg font-semibold text-[#173228]">
+              — Jose Eliseo Soriano “Chepe Cutuco”
+            </p>
+            <p className="mt-2 text-sm uppercase tracking-[.22em] text-black/45">
+              Casacutuco.com
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="homes" className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
         <p className="text-xs font-black uppercase tracking-[.18em] text-[#b96745]">{t.choose}</p>
         <h2 className="mt-3 text-4xl font-black tracking-[-.045em] sm:text-5xl">{t.chooseTitle}</h2>
