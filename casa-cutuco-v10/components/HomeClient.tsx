@@ -38,7 +38,7 @@ function BerlinTownCarousel() {
       <div className="mb-8 flex items-end justify-between gap-4">
         <div className="max-w-2xl">
           <p className="text-xs font-black uppercase tracking-[.18em] text-[#b96745]">
-            {lang === "es" ? "Berlín, Usulután" : "Berlín, Usulután"}
+            Berlín, Usulután
           </p>
           <h2 className="mt-3 text-4xl font-black tracking-[-.045em] sm:text-5xl">
             {lang === "es" ? "Imágenes del pueblo" : "Town image carousel"}
