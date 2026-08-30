@@ -165,7 +165,7 @@ export default function HomeClient() {
                 className="text-[2.5rem] leading-[1.2] text-[#24483a] sm:text-[3.2rem] lg:text-[3.8rem]"
                 style={{ fontFamily: "\"Snell Roundhand\", \"Brush Script MT\", \"Segoe Script\", cursive" }}
               >
-                “Yo nunca le he negado mi casa a nadie. Mi puerta siempre estará abierta para mi familia y amigos, mientras haya respeto y amor.”
+                «Yo nunca le he negado mi casa a nadie. Mi puerta siempre estará abierta para mi familia y amigos, mientras haya respeto y amor.»
               </p>
             </blockquote>
             <p className="mt-6 text-lg font-semibold text-[#173228]">
