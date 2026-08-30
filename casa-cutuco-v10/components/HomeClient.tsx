@@ -30,7 +30,7 @@ export default function HomeClient() {
             <div className="overflow-hidden rounded-[32px] bg-white shadow-[0_18px_50px_rgba(20,34,27,0.12)]">
               <img
                 src="https://github.com/user-attachments/assets/37349318-3c7e-46c7-89a1-84f80c27fdd6"
-                alt={"Jose Eliseo Soriano “Chepe Cutuco”"}
+                alt="Portrait of Jose Eliseo Soriano, Chepe Cutuco"
                 className="h-full w-full object-cover"
               />
             </div>
