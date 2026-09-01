@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { MapPin, Droplets, Wind, ChevronLeft, ChevronRight, ExternalLink, X } from "lucide-react";
+import { MapPin, Droplets, Wind, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useLang } from "./LanguageProvider";
 
 // Weather Widget Component
@@ -474,17 +474,8 @@ function FeatureHighlights() {
 export default function LocationSection() {
   const { lang } = useLang();
 
-  const address = {
-    street: "2a Av. Sur y 6a Calle Oriente",
-    neighborhood: "Barrio San José",
-    city: "Berlín, Usulután",
-    zipcode: "03403",
-    country: "El Salvador"
-  };
-
-  // Updated map embed with precise coordinates
-  const mapEmbedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8642!2d-88.53015834864676!3d13.496171711959391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sCasa%20Cutuco!2sBerlín%2C%20Usulután%2C%20El%20Salvador!5e0!3m2!1sen!2ssv!4v1693318800000`;
-  const googleMapsUrl = `https://www.google.com/maps/?q=13.496171711959391,-88.53015834864676`;
+  const mapEmbedUrl = `https://www.google.com/maps?q=Berl%C3%ADn%2C%20Usulut%C3%A1n%2C%20El%20Salvador&output=embed`;
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=Berl%C3%ADn%2C%20Usulut%C3%A1n%2C%20El%20Salvador`;
 
   return (
     <section id="location" className="relative bg-white py-20 lg:py-28">
@@ -499,14 +490,14 @@ export default function LocationSection() {
           </h2>
           <p className="max-w-2xl text-lg leading-8 text-gray-600">
             {lang === "es"
-              ? "Casa Cutuco se encuentra en el tranquilo barrio de Barrio San José en Berlín, Usulután. Rodeado de vistas a las montañas, paisajes de cultivo de café y auténtica cultura salvadoreña, la propiedad ofrece un retiro relajante mientras permanece cerca de restaurantes, cafés, tiendas y atracciones locales."
-              : "Casa Cutuco is located in the peaceful neighborhood of Barrio San José in Berlín, Usulután. Surrounded by mountain views, coffee-growing landscapes, and authentic Salvadoran culture, the property offers a relaxing retreat while remaining close to restaurants, cafés, shops, and local attractions."}
+              ? "Casa Cutuco está en Berlín, Usulután. Rodeado de vistas a las montañas, paisajes de cultivo de café y auténtica cultura salvadoreña, este destino ofrece un retiro relajante cerca de restaurantes, cafés, tiendas y atracciones locales."
+              : "Casa Cutuco is in Berlín, Usulután. Surrounded by mountain views, coffee-growing landscapes, and authentic Salvadoran culture, this destination offers a relaxing retreat close to restaurants, cafés, shops, and local attractions."}
           </p>
         </div>
 
         {/* Two Column Layout */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {/* Left Column: Map & Address */}
+          {/* Left Column: Map */}
           <div className="space-y-6">
             {/* Map Embed */}
             <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100 h-[400px]">
@@ -518,48 +509,29 @@ export default function LocationSection() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Casa Cutuco Location Map"
+                title="Berlin Town Map"
               ></iframe>
             </div>
 
-            {/* Address Card */}
             <div className="rounded-2xl bg-gradient-to-br from-[#24483a] to-[#173228] p-8 text-white shadow-lg border border-white/10">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="p-3 bg-white/10 rounded-full backdrop-blur">
-                  <MapPin size={24} className="text-white" />
-                </div>
-                <div className="flex-1">
-                  <p className="text-sm font-semibold text-white/70 uppercase tracking-wider mb-1">
-                    {lang === "es" ? "Dirección" : "Address"}
-                  </p>
-                  <p className="text-xl font-black mb-2">{address.street}</p>
-                  <p className="text-white/80 mb-1">{address.neighborhood}</p>
-                  <p className="text-white/80 mb-1">{address.city}, {address.zipcode}</p>
-                  <p className="text-white/80">{address.country}</p>
-                </div>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 pt-6 border-t border-white/10">
+              <p className="text-lg font-bold mb-2">
+                {lang === "es" ? "Explora Berlín, Usulután" : "Explore Berlín, Usulután"}
+              </p>
+              <p className="text-white/80 mb-6">
+                {lang === "es"
+                  ? "El mapa muestra el pueblo de Berlín para ayudarte a ubicar la zona."
+                  : "The map shows the town of Berlín to help you locate the area."}
+              </p>
+              <div className="pt-6 border-t border-white/10">
                 <a
                   href={googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 bg-white text-[#24483a] font-bold py-3 px-4 rounded-full hover:bg-gray-100 transition-colors"
-                  aria-label="Get directions on Google Maps"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-white text-[#24483a] font-bold py-3 px-4 rounded-full hover:bg-gray-100 transition-colors"
+                  aria-label="View Berlin town on Google Maps"
                 >
                   <MapPin size={18} />
-                  {lang === "es" ? "Obtener Direcciones" : "Get Directions"}
-                </a>
-                <a
-                  href={googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 border border-white/30 text-white font-bold py-3 px-4 rounded-full hover:bg-white/10 transition-colors"
-                  aria-label="View on Google Maps"
-                >
-                  <ExternalLink size={18} />
-                  {lang === "es" ? "Ver en Google Maps" : "View on Maps"}
+                  {lang === "es" ? "Ver Berlín en Google Maps" : "View Berlín on Google Maps"}
                 </a>
               </div>
             </div>
