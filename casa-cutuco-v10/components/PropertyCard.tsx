@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { properties } from "@/lib/properties";
 import { useLang } from "./LanguageProvider";
-import { BedDouble, Star, Users, CalendarCheck2, MessageCircle, ExternalLink } from "lucide-react";
+import { BedDouble, Star, Users, CalendarCheck2, ExternalLink } from "lucide-react";
 
 type BlockedRange = { start: string; end: string };
 
@@ -18,11 +18,6 @@ export default function PropertyCard({ id }: { id: string }) {
       .then(data => setConnected(Boolean(data.connected)))
       .catch(() => setConnected(false));
   }, [id]);
-
-  const waText = lang === "es"
-    ? `Hola, tengo una pregunta sobre ${p.name}.`
-    : `Hello, I have a question about ${p.name}.`;
-  const wa = `https://wa.me/17605965501?text=${encodeURIComponent(waText)}`;
 
   return (
     <article className="overflow-hidden rounded-[30px] border border-black/8 bg-white shadow-sm">
@@ -60,16 +55,6 @@ export default function PropertyCard({ id }: { id: string }) {
         >
           {lang === "es" ? "Reservar en Airbnb" : "Reserve on Airbnb"}
           <ExternalLink size={17}/>
-        </a>
-
-        <a
-          href={wa}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-2 flex items-center justify-center gap-2 rounded-2xl border border-black/15 px-5 py-3.5 text-sm font-bold"
-        >
-          <MessageCircle size={17}/>
-          {lang === "es" ? "¿Tienes preguntas? WhatsApp" : "Questions? Message on WhatsApp"}
         </a>
 
         <p className="mt-3 text-center text-xs leading-5 text-black/40">

@@ -4,6 +4,7 @@ import PropertyCard from "./PropertyCard";
 import VideoTour from "./VideoTour";
 import PhotoGalleries from "./PhotoGalleries";
 import LocationSection from "./LocationSection";
+import { properties } from "@/lib/properties";
 import { useLang } from "./LanguageProvider";
 import { CalendarSync, ShieldCheck, MapPin } from "lucide-react";
 
@@ -36,6 +37,32 @@ export default function HomeClient() {
       <PhotoGalleries />
 
       <VideoTour />
+
+      <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-24">
+        <div className="grid items-center gap-8 rounded-[30px] border border-black/8 bg-[#f8f5ee] p-6 shadow-sm md:grid-cols-2 md:p-10">
+          <div className="overflow-hidden rounded-2xl">
+            <img
+              src="https://github.com/user-attachments/assets/121b437c-f698-46b0-a7c3-309d19a3b0a1"
+              alt="Casa Cutuco IM"
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <p className="text-xs font-black uppercase tracking-[.18em] text-[#b96745]">
+              {lang === "es" ? "Historia" : "Story"}
+            </p>
+            <h2 className="mt-3 text-3xl font-black tracking-[-.04em] sm:text-4xl">
+              {lang === "es" ? "Casa Cutuco IM" : "Casa Cutuco IM"}
+            </h2>
+            <p className="mt-4 leading-7 text-black/65">
+              {lang === "es"
+                ? "Casa Cutuco IM representa la esencia de Berlín, Usulután: tranquilidad, hospitalidad y conexión con la cultura local. Es una experiencia pensada para descansar y disfrutar la montaña."
+                : "Casa Cutuco IM reflects the essence of Berlín, Usulután: calm, hospitality, and connection with local culture. It is designed as a stay experience to rest and enjoy the mountain setting."}
+            </p>
+          </div>
+        </div>
+      </section>
 
       <LocationSection />
 
@@ -72,10 +99,30 @@ export default function HomeClient() {
       </section>
 
 <section id="contact" className="mx-auto max-w-7xl px-5 py-20 text-center lg:px-8">
-        <a href="https://wa.me/17605965501" target="_blank" rel="noreferrer" className="inline-block rounded-full bg-[#b96745] px-7 py-4 font-bold text-white">
-          {t.contact}
-        </a>
-        <p className="mt-3 text-sm text-black/45">+1 (760) 596-5501</p>
+        <p className="text-xs font-black uppercase tracking-[.18em] text-[#b96745]">
+          {lang === "es" ? "Reserva" : "Booking"}
+        </p>
+        <h2 className="mt-3 text-3xl font-black tracking-[-.04em] sm:text-4xl">
+          {lang === "es" ? "Elige tu casa y reserva en Airbnb" : "Choose your home and book on Airbnb"}
+        </h2>
+        <div className="mx-auto mt-8 grid max-w-3xl gap-3 sm:grid-cols-2">
+          <a
+            href={properties[0].airbnb}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block rounded-full bg-[#24483a] px-7 py-4 font-bold text-white"
+          >
+            {lang === "es" ? "Reservar Casa Cutuco #1" : "Book Casa Cutuco #1"}
+          </a>
+          <a
+            href={properties[1].airbnb}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block rounded-full bg-[#b96745] px-7 py-4 font-bold text-white"
+          >
+            {lang === "es" ? "Reservar Casa Cutuco #2" : "Book Casa Cutuco #2"}
+          </a>
+        </div>
       </section>
     </main>
   );

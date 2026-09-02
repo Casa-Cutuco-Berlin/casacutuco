@@ -131,98 +131,50 @@ const attractionsContent: AttractionContent[] = [
   {
     id: 1,
     icon: "🏛️",
-    title: { es: "Centro de Berlín", en: "Berlín Town Center" },
+    title: { es: "Parque Central de Berlín", en: "Berlín Central Park" },
     description: {
-      es: "Mercados locales, parque central y arquitectura colonial",
-      en: "Local markets, central park & colonial architecture"
+      es: "Plaza principal de Berlín con ambiente local, árboles y espacios culturales.",
+      en: "Berlín’s main square with local atmosphere, trees, and cultural gathering spaces."
     },
     time: "5 min",
     category: { es: "Pueblo", en: "Town" },
-    image: "https://elsalvador.travel/system/wp-content/uploads/2021/04/Berlin6E9A4842.jpg"
+    image: "https://github.com/user-attachments/assets/6f0d0ef2-a3e0-4251-8b5c-a79ce854734c"
   },
   {
     id: 2,
-    icon: "☕",
-    title: { es: "Café & Tours", en: "Coffee Farms & Tours" },
+    icon: "🌄",
+    title: { es: "Paisajes de Berlín", en: "Berlín Scenic Landscapes" },
     description: {
-      es: "Plantaciones de café y tours educativos",
-      en: "Coffee plantations & educational farm tours"
-    },
-    time: "15 min",
-    category: { es: "Naturaleza", en: "Nature" },
-    image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip"
-  },
-  {
-    id: 3,
-    icon: "🍽️",
-    title: { es: "Restaurantes Locales", en: "Local Restaurants" },
-    description: {
-      es: "Comida salvadoreña auténtica y cafés modernos",
-      en: "Authentic Salvadoran food & modern cafés"
-    },
-    time: "5-10 min",
-    category: { es: "Gastronomía", en: "Dining" },
-    image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip"
-  },
-  {
-    id: 4,
-    icon: "🏔️",
-    title: { es: "Miradores", en: "Mountain Viewpoints" },
-    description: {
-      es: "Vistas panorámicas de las montañas",
-      en: "Panoramic mountain views & sunrise spots"
+      es: "Vistas panorámicas de la zona de Berlín y sus alrededores montañosos.",
+      en: "Panoramic views around Berlín and its mountainous surroundings."
     },
     time: "10-20 min",
     category: { es: "Vistas", en: "Views" },
-    image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip"
+    image: "https://github.com/user-attachments/assets/9f64f545-6e2e-43e5-9ba6-a74cbdc1d657"
   },
   {
-    id: 5,
-    icon: "🥾",
-    title: { es: "Senderos", en: "Nature Trails" },
+    id: 3,
+    icon: "🌿",
+    title: { es: "Naturaleza y Senderos", en: "Nature & Trails" },
     description: {
-      es: "Caminatas en la naturaleza y exploración",
-      en: "Scenic hiking & nature exploration"
+      es: "Rutas y áreas verdes para caminar y disfrutar el clima fresco de la zona.",
+      en: "Trails and green areas to walk and enjoy the region’s cool weather."
     },
     time: "20-30 min",
-    category: { es: "Aventura", en: "Adventure" },
-    image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip"
-  },
-  {
-    id: 6,
-    icon: "💧",
-    title: { es: "Laguna Alegría", en: "Alegría Lagoon" },
-    description: {
-      es: "Laguna volcánica única y ecosistema",
-      en: "Unique volcanic lagoon & ecosystem"
-    },
-    time: "30 min",
     category: { es: "Naturaleza", en: "Nature" },
-    image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip"
+    image: "https://github.com/user-attachments/assets/54d3de71-f395-4eea-aa19-d1b18eef5eab"
   },
   {
-    id: 7,
-    icon: "🛍️",
-    title: { es: "Mercados", en: "Local Markets" },
-    description: {
-      es: "Artesanías, flores y productos locales",
-      en: "Crafts, flowers & local produce"
-    },
-    time: "5-10 min",
-    category: { es: "Compras", en: "Shopping" },
-    image: "https://elsalvador.travel/system/wp-content/uploads/2021/04/Berlin6E9A4842.jpg"
-  },
-  {
-    id: 8,
+    id: 4,
     icon: "🎭",
-    title: { es: "Sitios Culturales", en: "Cultural Landmarks" },
+    title: { es: "Cultura Local", en: "Local Culture" },
     description: {
-      es: "Historia y patrimonio salvadoreño",
-      en: "Salvadoran history & heritage sites"
+      es: "Lugares representativos para conocer la identidad y vida local de Berlín.",
+      en: "Representative spots to experience Berlín’s local identity and everyday life."
     },
     time: "10-15 min",
     category: { es: "Cultura", en: "Culture" },
-    image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip"
+    image: "https://github.com/user-attachments/assets/acc1d6a2-c885-44a2-96e5-cda4915dcebf"
   }
 ];
 
