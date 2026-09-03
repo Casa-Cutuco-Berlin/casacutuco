@@ -7,14 +7,62 @@
   --cream: #fbf5e9;
   --clay: #b96745;
 }
+
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin:0; color:var(--ink); background:#fffdf8; font-family:Arial,Helvetica,sans-serif; }
-button,input,select,textarea { font:inherit; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  scroll-margin-top: 88px;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: linear-gradient(180deg, #fffdf9 0%, #fffaf2 100%);
+  font-family: Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(185, 103, 69, 0.18);
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
 .hero {
   background:
-    linear-gradient(90deg, rgba(17,35,27,.80), rgba(17,35,27,.25)),
+    linear-gradient(90deg, rgba(17,35,27,.82), rgba(17,35,27,.28)),
     url("https://a0.muscache.com/im/pictures/miso/Hosting-1548260998568327005/original/28d23295-cb8d-4dda-903b-7a5d521fb614.jpeg?im_w=1200");
-  background-size:cover;
-  background-position:center;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
