@@ -32,4 +32,4 @@ jobs:
       - name: Notify Vercel
         uses: vercel/repository-dispatch/actions/status@v1
         with:
-          name: Vercel - casa-cutuco-v10: jsoriano1045/casacutuco
+          name: 'Vercel - casa-cutuco-v10: jsoriano1045/casacutuco'
