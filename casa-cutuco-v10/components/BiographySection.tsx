@@ -18,7 +18,7 @@ export default function BiographySection() {
           <p className="text-xl leading-9 text-gray-800">
             {lang === "es"
               ? "“Yo nunca le he negado mi casa a nadie. Mi puerta siempre estará abierta para mi familia y amigos, mientras haya respeto y amor.”"
-              : "\"I have never denied my home to anyone. My door will always be open to my family and friends, as long as there is respect and love.\""}
+              : "“I have never denied my home to anyone. My door will always be open to my family and friends, as long as there is respect and love.”"}
           </p>
           <footer className="mt-4 text-sm font-semibold uppercase tracking-wider text-gray-600">
             {lang === "es"
