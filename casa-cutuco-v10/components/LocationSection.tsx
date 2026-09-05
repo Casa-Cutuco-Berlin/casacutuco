@@ -527,7 +527,7 @@ export default function LocationSection() {
                 </div>
                 <div className="flex-1">
                   <p className="text-sm font-semibold text-white/70 uppercase tracking-wider mb-1">
-                    {lang === "es" ? "Dirección" : "Address"}
+                    {lang === "es" ? "Ubicación" : "Location"}
                   </p>
                   <p className="text-xl font-black mb-2">{address.region}</p>
                   <p className="text-white/80">{address.country}</p>

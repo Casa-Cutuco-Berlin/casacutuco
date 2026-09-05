@@ -6,12 +6,12 @@ export default function BiographySection() {
   const { lang } = useLang();
 
   return (
-    <section id="biography" className="bg-[#f8f5ee]">
+    <section id="biography" aria-labelledby="biography-heading" className="bg-[#f8f5ee]">
       <div className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-24">
         <p className="text-xs font-black uppercase tracking-[.18em] text-[#b96745]">
           {lang === "es" ? "Biografía" : "Biography"}
         </p>
-        <h2 className="mt-3 text-4xl font-black tracking-[-.045em] text-gray-900 sm:text-5xl">
+        <h2 id="biography-heading" className="mt-3 text-4xl font-black tracking-[-.045em] text-gray-900 sm:text-5xl">
           {lang === "es" ? "La historia de Casa Cutuco" : "The story behind Casa Cutuco"}
         </h2>
         <figure className="mt-6 max-w-4xl border-l-4 border-[#b96745] pl-6">
