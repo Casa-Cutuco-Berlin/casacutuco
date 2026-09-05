@@ -475,7 +475,7 @@ export default function LocationSection() {
   const { lang } = useLang();
 
   const address = {
-    city: "Berlín, Usulután",
+    region: "Berlín, Usulután",
     country: "El Salvador"
   };
 
@@ -529,7 +529,7 @@ export default function LocationSection() {
                   <p className="text-sm font-semibold text-white/70 uppercase tracking-wider mb-1">
                     {lang === "es" ? "Dirección" : "Address"}
                   </p>
-                  <p className="text-xl font-black mb-2">{address.city}</p>
+                  <p className="text-xl font-black mb-2">{address.region}</p>
                   <p className="text-white/80">{address.country}</p>
                 </div>
               </div>
