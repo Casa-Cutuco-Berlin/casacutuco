@@ -41,6 +41,7 @@ export default function HomeClient() {
 
       <VideoTour />
 
+      {/* Keep biography before location details to preserve the story-to-place flow on the homepage. */}
       <BiographySection />
 
       <LocationSection />

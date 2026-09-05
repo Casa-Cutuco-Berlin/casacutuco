@@ -15,14 +15,14 @@ export default function BiographySection() {
           {lang === "es" ? "La historia de Casa Cutuco" : "The story behind Casa Cutuco"}
         </h2>
         <figure className="mt-6 max-w-4xl border-l-4 border-[#b96745] pl-6">
-          <blockquote>
+          <blockquote aria-describedby="biography-attribution">
             <p className="text-xl leading-9 text-gray-800">
               {lang === "es"
                 ? "“Yo nunca le he negado mi casa a nadie. Mi puerta siempre estará abierta para mi familia y amigos, mientras haya respeto y amor.”"
                 : "“I have never denied my home to anyone. My door will always be open to my family and friends, as long as there is respect and love.”"}
             </p>
           </blockquote>
-          <figcaption className="mt-4 text-sm font-semibold text-gray-600">
+          <figcaption id="biography-attribution" className="mt-4 text-sm font-semibold text-gray-600">
             <cite className="not-italic">
               {lang === "es"
                 ? "— José Eliseo Soriano “Chepe Cutuco” · Casa Cutuco"
