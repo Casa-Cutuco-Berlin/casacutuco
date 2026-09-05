@@ -12,7 +12,7 @@ export async function GET(request: NextRequest) {
     const userId = searchParams.get('userId') || 'usr_anonymous_' + Math.random().toString(36).substring(7);
 
     // Start authorization flow
-    const authorizationUrl = await startAuthorization('github/casa-cutuco-v10', {
+    const { url: authorizationUrl } = await startAuthorization('github/casa-cutuco-v10', {
       subject: {
         type: 'user',
         id: userId
