@@ -21,9 +21,11 @@ export default function BiographySection() {
               : "“I have never denied my home to anyone. My door will always be open to my family and friends, as long as there is respect and love.”"}
           </p>
           <footer className="mt-4 text-sm font-semibold text-gray-600">
-            {lang === "es"
-              ? "— José Eliseo Soriano “Chepe Cutuco” · Casa Cutuco"
-              : "— José Eliseo Soriano “Chepe Cutuco” · Casa Cutuco"}
+            <cite className="not-italic">
+              {lang === "es"
+                ? "— José Eliseo Soriano “Chepe Cutuco” · Casa Cutuco"
+                : "— José Eliseo Soriano “Chepe Cutuco” · Casa Cutuco"}
+            </cite>
           </footer>
         </blockquote>
       </div>
