@@ -22,8 +22,8 @@ export default function BiographySection() {
           </p>
           <footer className="mt-4 text-sm font-semibold uppercase tracking-wider text-gray-600">
             {lang === "es"
-              ? "— Jose Eliseo Soriano “Chepe Cutuco” · Casa Cutuco"
-              : "— Jose Eliseo Soriano “Chepe Cutuco” · Casa Cutuco"}
+              ? "— José Eliseo Soriano “Chepe Cutuco” · Casa Cutuco"
+              : "— José Eliseo Soriano “Chepe Cutuco” · Casa Cutuco"}
           </footer>
         </blockquote>
       </div>
