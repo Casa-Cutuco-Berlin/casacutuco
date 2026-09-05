@@ -475,10 +475,7 @@ export default function LocationSection() {
   const { lang } = useLang();
 
   const address = {
-    street: "2a Av. Sur y 6a Calle Oriente",
-    neighborhood: "Barrio San José",
     city: "Berlín, Usulután",
-    zipcode: "03403",
     country: "El Salvador"
   };
 
@@ -499,8 +496,8 @@ export default function LocationSection() {
           </h2>
           <p className="max-w-2xl text-lg leading-8 text-gray-600">
             {lang === "es"
-              ? "Casa Cutuco se encuentra en el tranquilo barrio de Barrio San José en Berlín, Usulután. Rodeado de vistas a las montañas, paisajes de cultivo de café y auténtica cultura salvadoreña, la propiedad ofrece un retiro relajante mientras permanece cerca de restaurantes, cafés, tiendas y atracciones locales."
-              : "Casa Cutuco is located in the peaceful neighborhood of Barrio San José in Berlín, Usulután. Surrounded by mountain views, coffee-growing landscapes, and authentic Salvadoran culture, the property offers a relaxing retreat while remaining close to restaurants, cafés, shops, and local attractions."}
+              ? "Casa Cutuco se encuentra en Berlín, Usulután. Rodeado de vistas a las montañas, paisajes de cultivo de café y auténtica cultura salvadoreña, la propiedad ofrece un retiro relajante mientras permanece cerca de restaurantes, cafés, tiendas y atracciones locales."
+              : "Casa Cutuco is located in Berlín, Usulután. Surrounded by mountain views, coffee-growing landscapes, and authentic Salvadoran culture, the property offers a relaxing retreat while remaining close to restaurants, cafés, shops, and local attractions."}
           </p>
         </div>
 
@@ -532,9 +529,7 @@ export default function LocationSection() {
                   <p className="text-sm font-semibold text-white/70 uppercase tracking-wider mb-1">
                     {lang === "es" ? "Dirección" : "Address"}
                   </p>
-                  <p className="text-xl font-black mb-2">{address.street}</p>
-                  <p className="text-white/80 mb-1">{address.neighborhood}</p>
-                  <p className="text-white/80 mb-1">{address.city}, {address.zipcode}</p>
+                  <p className="text-xl font-black mb-2">{address.city}</p>
                   <p className="text-white/80">{address.country}</p>
                 </div>
               </div>
