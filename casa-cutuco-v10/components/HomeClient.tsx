@@ -4,6 +4,7 @@ import PropertyCard from "./PropertyCard";
 import VideoTour from "./VideoTour";
 import PhotoGalleries from "./PhotoGalleries";
 import LocationSection from "./LocationSection";
+import BiographySection from "./BiographySection";
 import { useLang } from "./LanguageProvider";
 import { CalendarSync, ShieldCheck, MapPin } from "lucide-react";
 
@@ -39,6 +40,8 @@ export default function HomeClient() {
       <PhotoGalleries />
 
       <VideoTour />
+
+      <BiographySection />
 
       <LocationSection />
 
