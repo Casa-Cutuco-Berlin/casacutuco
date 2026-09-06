@@ -22,7 +22,7 @@ export default function BiographySection() {
                 : "“I have never denied my home to anyone. My door will always be open to my family and friends, as long as there is respect and love.”"}
             </p>
           </blockquote>
-          <figcaption id="biography-attribution" className="mt-4 text-sm font-semibold text-gray-600">
+          <figcaption className="mt-4 text-sm font-semibold text-gray-600">
             <cite className="not-italic">
               {lang === "es"
                 ? "— José Eliseo Soriano “Chepe Cutuco” · Casa Cutuco"
