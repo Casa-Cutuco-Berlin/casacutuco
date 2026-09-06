@@ -15,7 +15,7 @@ export default function BiographySection() {
           {lang === "es" ? "La historia de Casa Cutuco" : "The story behind Casa Cutuco"}
         </h2>
         <figure className="mt-6 max-w-4xl border-l-4 border-[#b96745] pl-6">
-          <blockquote aria-describedby="biography-attribution">
+          <blockquote>
             <p className="text-xl leading-9 text-gray-800">
               {lang === "es"
                 ? "“Yo nunca le he negado mi casa a nadie. Mi puerta siempre estará abierta para mi familia y amigos, mientras haya respeto y amor.”"
