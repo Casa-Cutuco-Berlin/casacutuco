@@ -1,0 +1,36 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'casa-cutuco-v10/package-lock.json'
+      
+      - name: Install dependencies
+        working-directory: casa-cutuco-v10
+        run: npm install
+      
+      - name: Build project
+        working-directory: casa-cutuco-v10
+        run: npm run build
+      
+      - name: Notify Vercel
+        if: github.event_name == 'push'
+        uses: vercel/repository-dispatch/actions/status@v1
+        with:
+          name: 'Vercel - casa-cutuco-v10: jsoriano1045/casacutuco'

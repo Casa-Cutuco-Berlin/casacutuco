@@ -1,4 +1,4 @@
-# Casa Cutuco v3
+# Casa Cutuco
 
 This version adds:
 
@@ -8,9 +8,10 @@ This version adds:
 - Future Stripe direct-payment API scaffold
 - Existing Airbnb booking links remain active
 
-## Run
+## Local development
 
 ```bash
+cd casa-cutuco-v10
 npm install
 cp .env.example .env.local
 npm run dev

@@ -148,7 +148,6 @@ function FeatureHighlights() {
 // Main Location Section
 export default function LocationSection() {
   const { lang } = useLang();
-
   return (
     <section id="location" className="relative bg-white py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
