@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Header from "./Header";
 import PropertyCard from "./PropertyCard";
 import VideoTour from "./VideoTour";
@@ -6,7 +7,126 @@ import PhotoGalleries from "./PhotoGalleries";
 import LocationSection from "./LocationSection";
 import BiographySection from "./BiographySection";
 import { useLang } from "./LanguageProvider";
-import { CalendarSync, ShieldCheck, MapPin } from "lucide-react";
+import { CalendarSync, ShieldCheck, MapPin, ChevronLeft, ChevronRight } from "lucide-react";
+
+function BerlinTownCarousel() {
+  const { lang } = useLang();
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const slides = [
+    {
+      image: "https://elsalvador.travel/system/wp-content/uploads/2021/04/Berlin6E9A4842.jpg",
+      title: lang === "es" ? "Centro de Berlín" : "Berlín town center",
+      description: lang === "es" ? "Arquitectura, parque y vida local en el corazón del pueblo." : "Architecture, park views, and local life in the heart of town."
+    },
+    {
+      image: "https://ak-d.tripcdn.com/images/0HJ6t12000isxdnw9DEDC_C_500_280.jpg?proc=source%2ftrip",
+      title: lang === "es" ? "Paisajes cafetaleros" : "Coffee landscapes",
+      description: lang === "es" ? "Montañas frescas y vistas que rodean Berlín, Usulután." : "Cool mountain scenery and views surrounding Berlín, Usulután."
+    },
+    {
+      image: "https://ak-d.tripcdn.com/images/0HJ2i12000gndc9z0C36E_C_500_280.jpg?proc=source%2ftrip",
+      title: lang === "es" ? "Ambiente del pueblo" : "Town atmosphere",
+      description: lang === "es" ? "Una mirada al carácter cálido y tranquilo de la zona." : "A look at the warm, peaceful character of the area."
+    }
+  ];
+
+  const goToPrevious = () => setCurrentIndex((currentIndex - 1 + slides.length) % slides.length);
+  const goToNext = () => setCurrentIndex((currentIndex + 1) % slides.length);
+
+  return (
+    <section className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+      <div className="mb-8 flex items-end justify-between gap-4">
+        <div className="max-w-2xl">
+          <p className="text-xs font-black uppercase tracking-[.18em] text-[#b96745]">
+            Berlín, Usulután
+          </p>
+          <h2 className="mt-3 text-4xl font-black tracking-[-.045em] sm:text-5xl">
+            {lang === "es" ? "Imágenes del pueblo" : "Town images"}
+          </h2>
+          <p className="mt-4 leading-7 text-black/55">
+            {lang === "es"
+              ? "Un vistazo visual al encanto de Berlín, sus paisajes y su ambiente tranquilo."
+              : "A visual glimpse of Berlín, its landscapes, and its peaceful atmosphere."}
+          </p>
+        </div>
+
+        <div className="hidden gap-3 sm:flex">
+          <button
+            onClick={goToPrevious}
+            className="rounded-full border border-black/10 bg-white p-3 text-[#173228] shadow-sm transition hover:bg-[#f8f5ee]"
+            aria-label={lang === "es" ? "Imagen anterior" : "Previous image"}
+          >
+            <ChevronLeft size={20} />
+          </button>
+          <button
+            onClick={goToNext}
+            className="rounded-full border border-black/10 bg-white p-3 text-[#173228] shadow-sm transition hover:bg-[#f8f5ee]"
+            aria-label={lang === "es" ? "Siguiente imagen" : "Next image"}
+          >
+            <ChevronRight size={20} />
+          </button>
+        </div>
+      </div>
+
+      <div className="overflow-hidden rounded-[32px] bg-white shadow-[0_18px_50px_rgba(20,34,27,0.12)]">
+        <div className="grid lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="h-[320px] sm:h-[420px] lg:h-[520px]">
+            <img
+              src={slides[currentIndex].image}
+              alt={slides[currentIndex].title}
+              className="h-full w-full object-cover"
+            />
+          </div>
+
+          <div className="flex flex-col justify-between bg-[#fffdf8] p-8">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[.18em] text-[#b96745]">
+                {lang === "es" ? `Imagen ${currentIndex + 1} de ${slides.length}` : `Image ${currentIndex + 1} of ${slides.length}`}
+              </p>
+              <h3 className="mt-4 text-3xl font-black tracking-[-.04em] text-[#173228]">
+                {slides[currentIndex].title}
+              </h3>
+              <p className="mt-4 leading-7 text-black/60">
+                {slides[currentIndex].description}
+              </p>
+            </div>
+
+            <div className="mt-8 flex items-center justify-between">
+              <div className="flex gap-2">
+                {slides.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentIndex(index)}
+                    className={`h-2.5 rounded-full transition ${index === currentIndex ? "w-10 bg-[#24483a]" : "w-2.5 bg-black/15"}`}
+                    aria-label={lang === "es" ? `Ir a imagen ${index + 1}` : `Go to image ${index + 1}`}
+                  />
+                ))}
+              </div>
+
+              <div className="flex gap-3 sm:hidden">
+                <button
+                  onClick={goToPrevious}
+                  className="rounded-full border border-black/10 bg-white p-3 text-[#173228] shadow-sm"
+                  aria-label={lang === "es" ? "Imagen anterior" : "Previous image"}
+                >
+                  <ChevronLeft size={20} />
+                </button>
+                <button
+                  onClick={goToNext}
+                  className="rounded-full border border-black/10 bg-white p-3 text-[#173228] shadow-sm"
+                  aria-label={lang === "es" ? "Siguiente imagen" : "Next image"}
+                >
+                  <ChevronRight size={20} />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function HomeClient() {
   const { t, lang } = useLang();
@@ -27,6 +147,42 @@ export default function HomeClient() {
           </div>
         </div>
       </section>
+
+      <section className="border-y border-black/6 bg-[#fbf5e9]">
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:px-8 lg:py-20">
+          <div className="order-1">
+            <div className="h-[520px] overflow-hidden rounded-[32px] bg-white shadow-[0_18px_50px_rgba(20,34,27,0.12)] sm:h-[640px] lg:h-[720px]">
+              <img
+                src="https://github.com/user-attachments/assets/37349318-3c7e-46c7-89a1-84f80c27fdd6"
+                alt="Portrait of Jose Eliseo Soriano, Chepe Cutuco"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="order-2">
+            <p className="text-xs font-black uppercase tracking-[.18em] text-[#b96745]">
+              {lang === "es" ? "Nuestra historia" : "Our story"}
+            </p>
+            <blockquote className="mt-5">
+              <p
+                className="text-[2.5rem] leading-[1.2] text-[#24483a] sm:text-[3.2rem] lg:text-[3.8rem]"
+                style={{ fontFamily: "\"Snell Roundhand\", \"Brush Script MT\", \"Segoe Script\", cursive" }}
+              >
+                «Yo nunca le he negado mi casa a nadie. Mi puerta siempre estará abierta para mi familia y amigos, mientras haya respeto y amor.»
+              </p>
+            </blockquote>
+            <p className="mt-6 text-lg font-semibold text-[#173228]">
+              — Jose Eliseo Soriano “Chepe Cutuco”
+            </p>
+            <p className="mt-2 text-sm uppercase tracking-[.22em] text-black/45">
+              Casacutuco.com
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <BerlinTownCarousel />
 
       <section id="homes" className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
         <p className="text-xs font-black uppercase tracking-[.18em] text-[#b96745]">{t.choose}</p>
