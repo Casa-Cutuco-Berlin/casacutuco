@@ -4,6 +4,7 @@ import PropertyCard from "./PropertyCard";
 import VideoTour from "./VideoTour";
 import PhotoGalleries from "./PhotoGalleries";
 import LocationSection from "./LocationSection";
+import BiographySection from "./BiographySection";
 import { useLang } from "./LanguageProvider";
 import { CalendarSync, ShieldCheck, MapPin } from "lucide-react";
 
@@ -39,6 +40,9 @@ export default function HomeClient() {
       <PhotoGalleries />
 
       <VideoTour />
+
+      {/* Keep biography before location details to preserve the story-to-place flow on the homepage. */}
+      <BiographySection />
 
       <LocationSection />
 
