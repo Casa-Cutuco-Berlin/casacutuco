@@ -137,11 +137,11 @@ export default function HomeClient() {
       <section className="hero min-h-[720px] text-white">
         <div className="mx-auto flex min-h-[720px] max-w-7xl items-end px-5 pb-16 lg:px-8 lg:pb-24">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-black/10 px-3 py-1.5 text-xs font-bold tracking-[0.08em] uppercase backdrop-blur"><MapPin size={14}/>{t.heroEyebrow}</span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-black/10 px-3 py-1.5 text-xs font-bold tracking-[0.08em] uppercase backdrop-blur"><MapPin size={14}/> Berlín, Usulután</span>
             <h1 className="mt-6 text-5xl font-black leading-[.97] tracking-[-.055em] sm:text-6xl lg:text-7xl">{t.heroTitle}</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">{t.heroText}</p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a href="#homes" className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 font-bold text-[#173228] shadow-lg shadow-black/10 transition-transform hover:-translate-y-0.5 hover:bg-[#f5efe8] focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80">{t.explore}</a>
+              <a href="#homes" className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 font-bold text-[#173228] shadow-lg shadow-black/10 transition-transform hover:-translate-y-0.5">{t.heroPrimary}</a>
               <a href="#contact" className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/5 px-6 py-3.5 font-bold text-white backdrop-blur-sm transition-colors hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80">{t.contact}</a>
             </div>
           </div>
@@ -153,7 +153,7 @@ export default function HomeClient() {
           <div className="order-1">
             <div className="h-[520px] overflow-hidden rounded-[32px] bg-white shadow-[0_18px_50px_rgba(20,34,27,0.12)] sm:h-[640px] lg:h-[720px]">
               <img
-                src="https://github.com/user-attachments/assets/37349318-3c7e-46c7-89a1-84f80c27fdd6"
+                src="/images/jose-eliseo-soriano.jpg"
                 alt="Portrait of Jose Eliseo Soriano, Chepe Cutuco"
                 className="h-full w-full object-cover"
               />
