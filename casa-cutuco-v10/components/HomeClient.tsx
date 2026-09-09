@@ -153,7 +153,7 @@ export default function HomeClient() {
           <div className="order-1">
             <div className="h-[520px] overflow-hidden rounded-[32px] bg-white shadow-[0_18px_50px_rgba(20,34,27,0.12)] sm:h-[640px] lg:h-[720px]">
               <img
-                src="/images/jose-eliseo-soriano.jpg"
+                src="https://github.com/user-attachments/assets/263df52a-eede-4b51-8a21-57cd8581dbba"
                 alt="Portrait of Jose Eliseo Soriano, Chepe Cutuco"
                 className="h-full w-full object-cover"
               />
