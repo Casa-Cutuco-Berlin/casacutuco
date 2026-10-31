@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import localFont from "next/font/local";
 import Header from "./Header";
 import PropertyCard from "./PropertyCard";
 import VideoTour from "./VideoTour";
@@ -8,6 +9,14 @@ import LocationSection from "./LocationSection";
 import BiographySection from "./BiographySection";
 import { useLang } from "./LanguageProvider";
 import { CalendarSync, ShieldCheck, MapPin, ChevronLeft, ChevronRight } from "lucide-react";
+
+const storyFont = localFont({
+  src: "../public/fonts/allura-latin-400-normal.woff2",
+  weight: "400",
+  style: "normal",
+  display: "swap",
+  fallback: ["cursive"],
+});
 
 function BerlinTownCarousel() {
   const { lang } = useLang();
@@ -166,8 +175,7 @@ export default function HomeClient() {
             </p>
             <blockquote className="mt-5">
               <p
-                className="text-[2.5rem] leading-[1.2] text-[#24483a] sm:text-[3.2rem] lg:text-[3.8rem]"
-                style={{ fontFamily: "\"Snell Roundhand\", \"Brush Script MT\", \"Segoe Script\", cursive" }}
+                className={`${storyFont.className} text-[2.5rem] leading-[1.2] text-[#24483a] sm:text-[3.2rem] lg:text-[3.8rem]`}
               >
                 {lang === "es"
                   ? "«Yo nunca le he negado mi casa a nadie. Mi puerta siempre estará abierta para mi familia y amigos, mientras haya respeto y amor.»"
