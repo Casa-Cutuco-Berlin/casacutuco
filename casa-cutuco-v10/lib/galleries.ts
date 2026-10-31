@@ -1,5 +1,10 @@
 export const galleries = {
   "casa-1": [
+    "/images/casa-1/living-room-1.webp",
+    "/images/casa-1/living-room-2.webp",
+    "/images/casa-1/kitchen.webp",
+    "/images/casa-1/kitchen-courtyard-access.webp",
+    "/images/casa-1/bedroom.webp",
     "https://a0.muscache.com/im/pictures/miso/Hosting-1548260998568327005/original/28d23295-cb8d-4dda-903b-7a5d521fb614.jpeg?im_w=1200",
     "https://a0.muscache.com/im/pictures/miso/Hosting-1548260998568327005/original/80a2be69-fdb3-4759-8006-479a7ea5f6ff.jpeg?im_w=1200",
     "https://a0.muscache.com/im/pictures/miso/Hosting-1548260998568327005/original/ff4252c6-3f19-4fd6-9909-a2bfa30f9674.jpeg?im_w=1200",
@@ -9,11 +14,23 @@ export const galleries = {
     "https://a0.muscache.com/im/pictures/hosting/Hosting-1548260998568327005/original/766219a9-4c2a-462d-92c1-8e72b81806c3.jpeg?im_w=1200"
   ],
   "casa-2": [
+    "/images/casa-2/front-of-house.webp",
     "https://a0.muscache.com/im/pictures/hosting/Hosting-1477991766643387473/original/e0441818-e582-4017-829b-dbec2f641ce3.jpeg?im_w=1200",
     "https://a0.muscache.com/im/pictures/hosting/Hosting-1477991766643387473/original/0a8eee0c-454a-4dc8-8dac-5be3d969a75b.jpeg?im_w=1200",
     "https://a0.muscache.com/im/pictures/hosting/Hosting-1477991766643387473/original/7a7bbcd5-c286-449e-81eb-00c61b65602b.jpeg?im_w=1200",
     "https://a0.muscache.com/im/pictures/hosting/Hosting-1477991766643387473/original/0a28804a-bf11-4a55-a317-aa5555501bac.jpeg?im_w=1200",
     "https://a0.muscache.com/im/pictures/hosting/Hosting-1477991766643387473/original/72acb6a5-5d0f-44e3-b206-2e47092e5f71.jpeg?im_w=1200",
     "https://a0.muscache.com/im/pictures/hosting/Hosting-1477991766643387473/original/d168b900-2756-4c47-b666-d6987d571850.jpeg?im_w=1200"
+  ],
+  "garden-terrace-views": [
+    "/images/garden-terrace-views/outdoor-2.webp",
+    "/images/garden-terrace-views/outdoor-3.webp",
+    "/images/garden-terrace-views/outdoor-4.webp",
+    "/images/garden-terrace-views/outdoor-5.webp",
+    "/images/garden-terrace-views/outdoor-6.webp",
+    "/images/garden-terrace-views/outdoor-7.webp",
+    "/images/garden-terrace-views/outdoor-8.webp",
+    "/images/garden-terrace-views/outdoor-9.webp",
+    "/images/garden-terrace-views/outdoor-10.webp"
   ]
 } as const;
