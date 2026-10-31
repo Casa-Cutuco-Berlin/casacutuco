@@ -12,6 +12,8 @@ This version adds:
 
 ```bash
 cd casa-cutuco-v10
+nvm install
+nvm use
 npm install
 cp .env.example .env.local
 npm run dev
