@@ -5,7 +5,7 @@ import { X, Images } from "lucide-react";
 import { galleries } from "@/lib/galleries";
 import { useLang } from "./LanguageProvider";
 
-function GalleryBlock({ propertyId, title }: { propertyId: "casa-1" | "casa-2"; title: string }) {
+function GalleryBlock({ propertyId, title }: { propertyId: keyof typeof galleries; title: string }) {
   const { lang } = useLang();
   const photos = galleries[propertyId];
   const [selected, setSelected] = useState<string | null>(null);
@@ -90,6 +90,10 @@ export default function PhotoGalleries() {
       <div className="mt-10">
         <GalleryBlock propertyId="casa-1" title="Casa Cutuco #1" />
         <GalleryBlock propertyId="casa-2" title="Casa Cutuco #2" />
+        <GalleryBlock
+          propertyId="garden-terrace-views"
+          title={lang === "es" ? "Jardín, terraza y vistas" : "Garden, terrace & views"}
+        />
       </div>
     </section>
   );
