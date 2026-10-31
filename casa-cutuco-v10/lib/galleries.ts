@@ -14,6 +14,7 @@ export const galleries = {
     "https://a0.muscache.com/im/pictures/hosting/Hosting-1548260998568327005/original/766219a9-4c2a-462d-92c1-8e72b81806c3.jpeg?im_w=1200"
   ],
   "casa-2": [
+    "/images/casa-2/front-of-house.webp",
     "https://a0.muscache.com/im/pictures/hosting/Hosting-1477991766643387473/original/e0441818-e582-4017-829b-dbec2f641ce3.jpeg?im_w=1200",
     "https://a0.muscache.com/im/pictures/hosting/Hosting-1477991766643387473/original/0a8eee0c-454a-4dc8-8dac-5be3d969a75b.jpeg?im_w=1200",
     "https://a0.muscache.com/im/pictures/hosting/Hosting-1477991766643387473/original/7a7bbcd5-c286-449e-81eb-00c61b65602b.jpeg?im_w=1200",
@@ -22,7 +23,6 @@ export const galleries = {
     "https://a0.muscache.com/im/pictures/hosting/Hosting-1477991766643387473/original/d168b900-2756-4c47-b666-d6987d571850.jpeg?im_w=1200"
   ],
   "garden-terrace-views": [
-    "/images/garden-terrace-views/outdoor-1.webp",
     "/images/garden-terrace-views/outdoor-2.webp",
     "/images/garden-terrace-views/outdoor-3.webp",
     "/images/garden-terrace-views/outdoor-4.webp",
