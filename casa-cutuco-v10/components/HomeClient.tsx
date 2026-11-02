@@ -5,6 +5,7 @@ import Header from "./Header";
 import PropertyCard from "./PropertyCard";
 import VideoTour from "./VideoTour";
 import PhotoGalleries from "./PhotoGalleries";
+import AirbnbReviews from "./AirbnbReviews";
 import LocationSection from "./LocationSection";
 import BiographySection from "./BiographySection";
 import { useLang } from "./LanguageProvider";
@@ -202,6 +203,8 @@ export default function HomeClient() {
           <PropertyCard id="casa-2"/>
         </div>
       </section>
+
+      <AirbnbReviews />
 
       <PhotoGalleries />
 
