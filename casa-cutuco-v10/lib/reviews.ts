@@ -9,6 +9,7 @@ export const reviews = [
   {
     id: "josue-recent",
     name: "Josué Neftalí",
+    photo: "/images/guests/josue.png",
     profile: { en: "1 month on Airbnb", es: "1 mes en Airbnb" },
     date: { en: "3 weeks ago (in the original screenshot)", es: "Hace 3 semanas (en la captura original)" },
     stay: { en: "Stayed one night", es: "Estancia de una noche" },
@@ -18,6 +19,7 @@ export const reviews = [
   {
     id: "josue-october",
     name: "Josué Neftalí",
+    photo: "/images/guests/josue.png",
     profile: { en: "1 month on Airbnb", es: "1 mes en Airbnb" },
     date: { en: "October 2026", es: "Octubre de 2026" },
     stay: { en: "Stayed one night", es: "Estancia de una noche" },
@@ -27,6 +29,7 @@ export const reviews = [
   {
     id: "txell",
     name: "Txell",
+    photo: "/images/guests/txell.png",
     profile: { en: "11 years on Airbnb", es: "11 años en Airbnb" },
     date: { en: "July 2026", es: "Julio de 2026" },
     stay: { en: "Stayed a few nights", es: "Estancia de varias noches" },
@@ -39,6 +42,7 @@ export const reviews = [
   {
     id: "charles",
     name: "Charles",
+    photo: "/images/guests/charles.png",
     profile: { en: "3 years on Airbnb", es: "3 años en Airbnb" },
     date: { en: "September 2026", es: "Septiembre de 2026" },
     stay: { en: "Stayed a few nights", es: "Estancia de varias noches" },
@@ -51,6 +55,7 @@ export const reviews = [
   {
     id: "wendy",
     name: "Wendy Ramírez",
+    photo: "/images/guests/wendy.png",
     profile: { en: "San Salvador, El Salvador", es: "San Salvador, El Salvador" },
     date: { en: "May 2026", es: "Mayo de 2026" },
     stay: { en: "Stayed one night", es: "Estancia de una noche" },
@@ -63,6 +68,7 @@ export const reviews = [
   {
     id: "jenny",
     name: "Jenny Carmelina",
+    photo: "/images/guests/jenny.png",
     profile: { en: "Santa Tecla, El Salvador", es: "Santa Tecla, El Salvador" },
     date: { en: "May 2026", es: "Mayo de 2026" },
     stay: { en: "Stayed with kids", es: "Estancia con niños" },

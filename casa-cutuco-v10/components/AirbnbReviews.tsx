@@ -52,8 +52,13 @@ export default function AirbnbReviews() {
         <div className="mt-6 grid gap-5 md:grid-cols-2">
           {reviews.map((review) => (
             <article key={review.id} data-review-id={review.id} className="rounded-[28px] border border-black/6 bg-white p-6 sm:p-7">
-              <h3 className="text-lg font-bold text-[#173228]">{review.name}</h3>
-              <p className="mt-1 text-sm text-black/55">{review.profile[lang]}</p>
+              <div className="flex items-center gap-3">
+                <Image src={review.photo} width={38} height={38} unoptimized alt="" className="size-[38px] shrink-0 rounded-full object-cover" />
+                <div>
+                  <h3 className="text-lg font-bold text-[#173228]">{review.name}</h3>
+                  <p className="mt-1 text-sm text-black/55">{review.profile[lang]}</p>
+                </div>
+              </div>
               <p className="mt-3 text-sm text-black/55">{review.date[lang]} · {review.stay[lang]}</p>
               <blockquote lang={lang} className="mt-4 leading-7 text-black/80">
                 <p>{review.text[lang]}</p>
